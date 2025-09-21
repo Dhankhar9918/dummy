@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - run: docker build . -t dhankhar9918/ajay
+    - run: docker build . -t dhankhar9918/ajay:older
     - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin 
     - run: docker push dhankhar9918/ajay:older
 
